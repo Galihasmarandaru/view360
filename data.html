@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi'>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://naver.github.io/egjs-view360/common/css/demo.css">
+    <link rel="stylesheet" href="https://naver.github.io/egjs-view360/common/css/PanoControls.css">
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+        rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="viewer" data-page="1">
+        <div class="container"></div>
+        <div class="layer" onclick="closeLayer(event);">
+            <img src="https://naver.github.io/egjs-view360/examples/panoviewer/etc/img/book1.jpg">
+        </div>
+        <!-- <div class="hotspot search" data-page="1" data-anchor-index="0" data-yaw="0" data-pitch="0"></div>
+
+        <div class="hotspot search" data-page="1" data-anchor-index="0" data-yaw="45" data-pitch="0">
+        </div> -->
+        <!-- <div class="hotspot search" data-page="1" data-anchor-index="1" data-yaw="-45" data-pitch="-18"
+            onclick="openLayer('book2.jpg')"></div>
+        <div class="hotspot search" data-page="1" data-anchor-index="2" data-yaw="6" data-pitch="-17"
+            onclick="openLayer('book3.jpg')"></div> -->
+        <!-- <div class="hotspot search" data-page="1" data-anchor-index="2" data-yaw="6" data-pitch="-17"
+            onclick="openLayer('book3.jpg')"></div> -->
+        <!-- <button id="cl" class="hotspot collapsible" data-page="1" data-anchor-index="2" data-yaw="6"
+            data-pitch="-17">Open
+            Collapsible</button>
+        <div class="hotspot content" data-page="1" data-anchor-index="2" data-yaw="6" data-pitch="0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div> -->
+        <!-- <div class="hotspot link" data-page="1" data-anchor-index="3" data-yaw="-96" data-pitch="-8"
+            onclick="load(this, 2)">
+            Economy<br>
+            Culture
+        </div>
+        <div class="hotspot search" data-page="2" data-anchor-index="0" data-yaw="-60" data-pitch="-23"
+            onclick="openLayer('book4.jpg')"></div>
+        <div class="hotspot link" data-page="2" data-anchor-index="1" data-yaw="80" data-pitch="-12"
+            onclick="load(this, 1)">
+            Technowlogy<br>Science
+        </div> -->
+    </div>
+    <div id="myDIV1" class="cms">
+        <div> yaw <input type="text" id="yaw1"></div> <br>
+        <div>pitch <input type="text" id="pitch1"></div> <br><br>
+        <button onclick="appendText()">Add Hotspot Text</button>
+        <button id="hide">Delete Hotspot</button>
+    </div>
+    <div id="myDIV2" class="cms">
+        <div> yaw <input type="text" id="yaw2"></div> <br>
+        <div>pitch <input type="text" id="pitch2"></div> <br><br>
+        <button onclick="appendImage()">Add Hotspot Image</button>
+        <button id="hide">Delete Hotspot</button>
+    </div>
+    <div id="myDIV3" class="cms">
+        <div> yaw <input type="text" id="yaw3"></div> <br>
+        <div>pitch <input type="text" id="pitch3"></div> <br><br>
+        <button onclick="appendVideo()">Add Hotspot Video</button>
+        <button id="hide">Delete Hotspot</button>
+    </div> <br> <br>
+    <div id="myDIV4" class="cms">
+        <button onclick="save()">SAVE</button> <br> <br>
+        <div></div>
+    </div>
+    <script src="https://naver.github.io/egjs-view360/common/js/jquery-2.2.4.js"></script>
+    <script src="https://naver.github.io/egjs-view360/common/js/qrcode.js"></script>
+    <script src="https://naver.github.io/egjs-view360/common/js/screenfull.min.js"></script>
+    <script src="https://naver.github.io/egjs-view360/common/js/PieView.js"></script>
+    <script src="https://naver.github.io/egjs-view360/release/latest/dist/view360.pkgd.js"></script>
+    <script src="https://naver.github.io/egjs-view360/common/js/PanoControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webxr-polyfill@latest/build/webxr-polyfill.min.js"></script>
+    <script src="https://naver.github.io/egjs-view360/common/js/initXR.js"></script>
+    <script src="static/index.js"></script>
+    <script src="static/append.js"></script>
+    <!-- <script src="static/dragable.js"></script> -->
+
+</body>
+
+</html>

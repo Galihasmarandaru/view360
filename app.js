@@ -52,10 +52,19 @@ app.set('view engine', 'ejs');
 // Public Folder
 app.use(express.static('./static'));
 
-app.get('/', (req, res) => res.render('index'));
+// app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => {
+  const tempView = fs.readFileSync(`${__dirname}/index.html`, 'utf-8');
+  return res.end(tempView);
+});
 
 app.get('/view360', (req, res) => {
-  const tempView = fs.readFileSync(`${__dirname}/index.html`, 'utf-8');
+  const tempView = fs.readFileSync(`${__dirname}/data.html`, 'utf-8');
+  return res.end(tempView);
+});
+
+app.get('/demoApi360', (req, res) => {
+  const tempView = fs.readFileSync(`${__dirname}/demoApi360.html`, 'utf-8');
   return res.end(tempView);
 });
 
@@ -76,7 +85,7 @@ app.post('/upload', (req, res) => {
           msg: 'Error: No File Selected!',
         });
       } else {
-        const tempView = fs.readFileSync(`${__dirname}/index.html`, 'utf-8');
+        const tempView = fs.readFileSync(`${__dirname}/data.html`, 'utf-8');
         return res.end(tempView);
         // res.render('view360.html');
         // , {
